@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container go">
+		<img src="door.png" class="w-25 door">
+		<img src="door2.png" class="w-25 door2">
+		<img src="door3.png" class="w-25 door3">
+	</div>
+	<div style="background-image: url(bg.jpg); height: 980px; background-size: 100% 100%; display:none;" class="hog">
+		
+			<h1 class="text-white">Помоги гарри найти плащ.палочку.метлу! Надо заработать 3 очка</h1>
+		
+		
+			<h1 class="text-white score_text">
+				0
+			</h1>
+			<button class="tth btn btn-success"> ВЫйти</button>
+			<img src="gun.png" style="width: 100px; position: absolute; margin-top: 800px" class="gun">
+			<img src="mantiya.png" style="width: 100px;position: absolute; margin-top: 700px; margin-left: 400px;" class="mantiya">
+			<img src="metla.png" style="width: 100px;position: absolute; margin-top: 600px; margin-left: 800px;" class="metla">
+			<img src="palochka.png" style="width: 100px;position: absolute; margin-top: 700px;margin-left: 980px;" class="palochka">
+			<img src="ring.png" style="width: 100px;position: absolute;margin-top: 200px;margin-left: 1300px;" class="ring">
+	
+	</div>
+	<script type="text/javascript">
+		let score = 0;
+		document.querySelector(".door").onclick = function(){
+			alert("добро пожаловать!")
+			document.querySelector(".go").style.display = "none"
+			document.querySelector(".hog").style.display = "block"
+		}
+		document.querySelector(".gun").onclick = function(){
+			document.querySelector(".gun").style.display = "none";
+			alert("ошибочка")
+			score=score - 1;
+			document.querySelector(".score_text").innerHTML = score;
+		}
+		document.querySelector(".mantiya").onclick = function(){
+			document.querySelector(".mantiya").style.display = "none";
+			
+			score=score + 1;
+			document.querySelector(".score_text").innerHTML = score;
+		}
+		document.querySelector(".metla").onclick = function(){
+			document.querySelector(".metla").style.display = "none";
+			score=score + 1;
+			document.querySelector(".score_text").innerHTML = score;
+		}
+		document.querySelector(".palochka").onclick = function(){
+			document.querySelector(".palochka").style.display = "none";
+			score=score + 1;
+			document.querySelector(".score_text").innerHTML = score;
+		}
+		document.querySelector(".ring").onclick = function(){
+			document.querySelector(".ring").style.display = "none";
+			alert('ошибочка')
+			score=score - 1
+			document.querySelector(".score_text").innerHTML = score;
+		}
+		document.querySelector(".tth").onclick = function(){
+			document.querySelector(".go").style.display = "block";
+			document.querySelector(".hog").style.display = "none";
+		}
+
+	</script>
+</body>
+</html>
